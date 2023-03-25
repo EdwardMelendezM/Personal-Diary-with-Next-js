@@ -11,6 +11,10 @@ const links:Array<LinkCustom> = [
   {
     label: 'About',
     route: '/about'
+  },
+  {
+    label: 'Post',
+    route: '/post'
   }
 ]
 export default function Navigator () {
