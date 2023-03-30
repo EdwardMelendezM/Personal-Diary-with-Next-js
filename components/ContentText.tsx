@@ -13,7 +13,7 @@ export default function ContentText () {
     }
   }, [isActive])
 
-  function handleChange (event:ChangeEvent<HTMLTextAreaElement>) {
+  const handleChange = (event:ChangeEvent<HTMLTextAreaElement>) => {
     setTexto(event.target.value)
   }
   return (
@@ -27,7 +27,7 @@ export default function ContentText () {
           cols={30}
           placeholder='Hoy miercoles 12 hize muchas cosas. Me levante temprano y ayude a mis padres. Luego desayune algo ricooo.'
         />
-        <ButtonGuardar />
+        <ButtonGuardar newText={texto} id={isActive.id ? isActive.id : null} />
       </div>
     </>
   )

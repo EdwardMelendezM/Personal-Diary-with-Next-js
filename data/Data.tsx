@@ -1,6 +1,6 @@
 import { Data } from './data.interface'
 
-export const data:Array<Data> = [
+export const allData:Array<Data> = [
   {
     id: 1,
     title: 'Nuevo diaaa',

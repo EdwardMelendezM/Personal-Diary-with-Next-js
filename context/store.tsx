@@ -1,7 +1,8 @@
 
 'use client'
 
-import { createContext, useContext, Dispatch, SetStateAction, useState } from 'react'
+import { allData } from '@/data/Data'
+import { createContext, useContext, Dispatch, SetStateAction, useState, useEffect } from 'react'
 
 export type DataTypeText={
   id?:number;
@@ -30,6 +31,9 @@ const GlobalContext = createContext<ContextProps>({
 export const GlobalContextProvider = ({ children }:any) => {
   const [isActive, setIsActive] = useState({})
   const [data, setData] = useState<[] | DataTypeText[]>([])
+  useEffect(() => {
+    setData(allData)
+  }, [data])
 
   return (
     <GlobalContext.Provider value={{ isActive, setIsActive, data, setData }}>
