@@ -1,6 +1,5 @@
-
+import './../styles/globals.css'
 import React from 'react'
-import Navigator from '../components/Navigator'
 
 export default function RootLayout ({
   children
@@ -10,10 +9,9 @@ export default function RootLayout ({
   return (
     <html lang='en'>
       <head>
-        <title>My fist proyect</title>
+        <title>Mi diario</title>
       </head>
       <body>
-        <Navigator />
         {children}
       </body>
     </html>

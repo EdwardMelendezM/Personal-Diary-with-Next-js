@@ -1,0 +1,6 @@
+.containerList{
+  width: 25%;
+  min-height: 90vh;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
