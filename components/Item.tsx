@@ -1,11 +1,15 @@
+import { Data } from '@/data/data.interface'
 import './../styles/Item.css'
-export default function Item () {
+interface Prop{
+  item:Data
+}
+export default function Item ({ item }:Prop) {
   return (
     <div className='itemContainer'>
-      <h4 className='itemContainerTitle'>Un dia mas</h4>
+      <h4 className='itemContainerTitle'>{item.title}</h4>
       <div>
-        <p className='itemContainerText'>Hoy vi una peli her...</p>
-        <p className='itemContainerText'>Miercoles 4 de Febrero 2023</p>
+        <p className='itemContainerText'>{item.content.slice(0, 20)}.</p>
+        <p className='itemContainerText'>{`${new Date(item.date).toLocaleTimeString()}`}</p>
       </div>
       <button className='itemContainerButtonClose'>X</button>
       <button className='itemContainerButtonFavorite'>▲</button>
