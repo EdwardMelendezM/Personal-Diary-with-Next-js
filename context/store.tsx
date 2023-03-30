@@ -3,30 +3,36 @@
 
 import { createContext, useContext, Dispatch, SetStateAction, useState } from 'react'
 
-type DataType = {
-    firstName: string
+export type DataTypeText={
+  id?:number;
+  title?:string;
+  text?:string;
+  date?:number
 }
 
 interface ContextProps {
-    userId: string,
-    setUserId: Dispatch<SetStateAction<string>>,
-    data: DataType[],
-    setData: Dispatch<SetStateAction<DataType[]>>
+    isActive:DataTypeText,
+    setIsActive:Dispatch<SetStateAction<DataTypeText>>;
+
+    data: DataTypeText[],
+    setData: Dispatch<SetStateAction<DataTypeText[]>>
 }
 
 const GlobalContext = createContext<ContextProps>({
-  userId: '',
-  setUserId: (): string => '',
+  isActive: {},
+  setIsActive: () => { },
+
   data: [],
-  setData: (): DataType[] => []
+  setData: () => []
+
 })
 
 export const GlobalContextProvider = ({ children }:any) => {
-  const [userId, setUserId] = useState('')
-  const [data, setData] = useState<[] | DataType[]>([])
+  const [isActive, setIsActive] = useState({})
+  const [data, setData] = useState<[] | DataTypeText[]>([])
 
   return (
-    <GlobalContext.Provider value={{ userId, setUserId, data, setData }}>
+    <GlobalContext.Provider value={{ isActive, setIsActive, data, setData }}>
       {children}
     </GlobalContext.Provider>
   )

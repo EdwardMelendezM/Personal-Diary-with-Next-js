@@ -1,3 +1,4 @@
+import { GlobalContextProvider } from '@/context/store'
 import './../styles/globals.css'
 import React from 'react'
 
@@ -12,7 +13,9 @@ export default function RootLayout ({
         <title>Mi diario</title>
       </head>
       <body>
-        {children}
+        <GlobalContextProvider>
+          {children}
+        </GlobalContextProvider>
       </body>
     </html>
   )
