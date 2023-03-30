@@ -6,7 +6,6 @@ export default function page () {
     <div className='containerMain'>
       <List />
       <Content />
-
     </div>
   )
 };
