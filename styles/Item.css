@@ -1,0 +1,48 @@
+.itemContainer{
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  height: 10vh;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.itemContainer:hover{
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+.itemContainerTitle{
+  font-size: 1.6em;
+  text-align: center;
+}
+.itemContainerText{
+  text-align: right;
+  color: #212020;
+}
+.itemContainerButtonFavorite{
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 15px;
+  right: -29px;
+  padding: 4px;
+  border:none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.itemContainerButtonClose{
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 45px;
+  right: -29px;
+  padding: 4px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.itemContainerButtonFavorite:hover ,.itemContainerButtonClose:hover{
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}

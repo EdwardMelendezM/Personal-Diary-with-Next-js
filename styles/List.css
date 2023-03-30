@@ -3,4 +3,22 @@
   min-height: 90vh;
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.containerListItem{
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 80%;
+  min-height: 70vh;
+  gap: 11px;
+}
+.containerListTitle{
+  font-size: 2.2em;
 }
