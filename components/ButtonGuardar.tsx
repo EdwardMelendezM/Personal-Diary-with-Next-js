@@ -14,6 +14,7 @@ export default function ButtonGuardar ({ newText, id }:Props) {
       }
     }
   }
+
   return (
     <button className='buttonGuardar' onClick={handleClickSaveNewText}>
       Guardar

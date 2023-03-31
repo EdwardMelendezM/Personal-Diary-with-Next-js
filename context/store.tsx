@@ -33,7 +33,7 @@ export const GlobalContextProvider = ({ children }:any) => {
   const [data, setData] = useState<[] | DataTypeText[]>([])
   useEffect(() => {
     setData(allData)
-  }, [data])
+  }, [])
 
   return (
     <GlobalContext.Provider value={{ isActive, setIsActive, data, setData }}>

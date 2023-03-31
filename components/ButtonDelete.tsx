@@ -7,6 +7,7 @@ export default function ButtonDelete ({ item }:Props) {
   const handleRemoveItem = () => {
     if (item.id) {
       const temp = data.filter(i => i.id !== item.id)
+
       setData([...temp])
     }
   }

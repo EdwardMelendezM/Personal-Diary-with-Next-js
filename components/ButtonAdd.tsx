@@ -1,3 +1,4 @@
+'use client'
 import { DataTypeText, useGlobalContext } from '@/context/store'
 
 export default function ButtonAdd () {
@@ -12,6 +13,7 @@ export default function ButtonAdd () {
     data.push(newData)
     console.log('ADD')
   }
+
   return (
     <button className='containerListButtonAdd' onClick={handleClickAddNewItem}> + </button>
   )

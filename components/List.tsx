@@ -3,6 +3,7 @@ import './../styles/List.css'
 import Item from './Item'
 import { useGlobalContext } from '@/context/store'
 import ButtonAdd from './ButtonAdd'
+
 export default function List () {
   const { data } = useGlobalContext()
 
